@@ -52,10 +52,10 @@ export const ProjectsSection = () => {
           </p>
         </div>
         <h2 className="font-serif text-3xl text-center mt-6">Featured Projects</h2>
-        <p>See how I transformed concepts into engaging digital experiences.</p>
-        <div>
+        <p className="text-center text-white/60 mt-4">See how I transformed concepts into engaging digital experiences.</p>
+        <div className="flex flex-col mt-10">
           {portfolioProjects.map(project => (
-            <div key={project.title}>
+            <div key={project.title} className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20">
               <div>
                 <span>{project.company}</span>
                 <span>{project.year}</span>
