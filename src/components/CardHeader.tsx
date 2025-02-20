@@ -7,7 +7,7 @@ export const CardHeader = ({ title, description, className, }: {
     className?: string;
 }) => {
     return (
-        <div className={twMerge("flex flex-col", className)}>
+        <div className={twMerge("flex flex-col p-6", className)}>
             {/* using teMerge to merge tailwind classes and added className for the ability to use it in the CardHeader of the About Section*/}
             <div className="inline-flex items-center gap-2">
                 <StarIcon className="size-9 text-emerald-300" />
