@@ -1,6 +1,11 @@
+"use client";
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 
 const footerLinks = [
+  {
+    title: 'Github',
+    href: 'https://github.com/Saeedul',
+  },
   {
     title: 'Facebook',
     href: 'https://www.facebook.com/share/1BXvTHcC3B/',
