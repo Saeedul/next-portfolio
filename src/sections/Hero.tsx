@@ -77,7 +77,7 @@ export const HeroSection = () => {
             Building Exceptional User Experiences
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I develop modern, high-performing web and mobile applications that drive growth and engagement. Let's discuss your next project.
+            I develop modern, high-performing web and mobile applications that drive growth and engagement. Let&apos;s discuss your next project.
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export const HeroSection = () => {
           {/* Let's Connect Button */}
           <a href="#contact" className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-gray-300">
             <span>👋🏻</span>
-            <span className="font-semibold">Let's Connect</span>
+            <span className="font-semibold">Let&apos;s Connect</span>
           </a>
         </div>
       </div>

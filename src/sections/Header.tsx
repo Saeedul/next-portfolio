@@ -1,15 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export const Header = () => {
   const [hidden, setHidden] = useState(false);
-  let lastScrollY = 0;
+  const lastScrollY = useRef(0); // Use useRef instead of a regular variable
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setHidden(currentScrollY > lastScrollY && currentScrollY > 50); // Hide when scrolling down
-      lastScrollY = currentScrollY;
+      setHidden(currentScrollY > lastScrollY.current && currentScrollY > 50);
+      lastScrollY.current = currentScrollY; // Update useRef value
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,7 +19,7 @@ export const Header = () => {
   return (
     <div
       className={`flex justify-center items-center fixed w-full z-10 transition-all duration-300 ${
-        hidden ? "-top-20" : "top-3" // Adjust top value to fully hide the navbar
+        hidden ? "-top-20" : "top-3"
       }`}
     >
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
